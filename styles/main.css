@@ -48,7 +48,6 @@ body {
     font-size: 46px;
     line-height: 40px;
     font-weight: bold;
-    margin: 0;
     color: #fff;
     margin: 335px 35px 80px 20px; }
   .header .header__title::before {
@@ -92,7 +91,8 @@ body {
       font-size: 22px;
       margin-left: 0;
       margin-bottom: 32px; }
-  .header__nav .phone-num, .header__nav .call-to-order {
+  .header__nav .phone-num,
+  .header__nav .call-to-order {
     color: #fff;
     font-size: 12px;
     letter-spacing: 2px;
