@@ -10,8 +10,11 @@ h1 {
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #eee;
+  background: #fff;
   margin: 0 auto; }
+
+.non-visible {
+  display: none !important; }
 
 .header {
   display: grid;
@@ -21,6 +24,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 0;
+  max-width: 360px;
   height: 568px;
   background: url(./../images/header.jpg);
   background-position-x: center;
@@ -60,8 +64,11 @@ body {
     background: #fff;
     border-radius: 5px; }
 
+.showMenu {
+  display: grid; }
+
 .header__nav {
-  display: none;
+  display: grid;
   height: 568px;
   background: #0075ff;
   color: #fff;
@@ -97,5 +104,135 @@ body {
     font-size: 12px;
     letter-spacing: 2px;
     line-height: 25px; }
+
+.content {
+  padding: 64px 20px; }
+  .content__title {
+    font-weight: bold;
+    line-height: 36px;
+    font-size: 36px;
+    color: #000; }
+  .content__title-link {
+    color: #0075ff;
+    text-decoration: none; }
+  .content__second-title {
+    color: #0075ff;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px; }
+  .content .content__text {
+    font-size: 16px;
+    line-height: 27px; }
+  .content .content__text--bold {
+    font-weight: bold; }
+
+.gallery {
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: self-start;
+      -ms-flex-align: self-start;
+          align-items: self-start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr; }
+  .gallery__title {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 36px;
+    font-weight: bold; }
+  .gallery .foto1 {
+    grid-area: 2 / 1 / 3 / 2;
+    background: url(../images/photos/1.jpg) no-repeat; }
+  .gallery .foto2 {
+    grid-area: 2 / 2 / 3 / 3;
+    background: url(../images/photos/2.jpg) no-repeat; }
+  .gallery .foto-title1 {
+    grid-area: 3 / 1 / 4 / 3; }
+  .gallery .foto3 {
+    grid-area: 4 / 1 / 5 / 2;
+    background: url(../images/photos/3.jpg) no-repeat; }
+  .gallery .foto4 {
+    grid-area: 4 / 2 / 5 / 3;
+    background: url(../images/photos/4.jpg) no-repeat; }
+  .gallery .foto-title2 {
+    grid-area: 5 / 1 / 6 / 3; }
+  .gallery .foto5 {
+    grid-area: 6 / 1 / 7 / 2;
+    background: url(../images/photos/5.jpg) no-repeat; }
+  .gallery .foto6 {
+    grid-area: auto;
+    background: url(../images/photos/6.jpg) no-repeat; }
+  .gallery .foto-title3 {
+    grid-area: 7 / 1 / 8 / 3; }
+  .gallery .foto-wrapper {
+    width: 131px;
+    height: 131px;
+    border-radius: 5px;
+    background-size: cover;
+    background-position-x: center; }
+  .gallery .foto-title {
+    margin-left: 20px;
+    color: #0075ff;
+    font-size: 16px; }
+    .gallery .foto-title .foto-description {
+      color: #3e3e3e; }
+
+.viev-all {
+  background: #fff;
+  color: #0075ff; }
+
+.viev-all:hover {
+  background: #0075ff;
+  color: #fff; }
+
+.consultation {
+  padding: 20px; }
+  .consultation .viev-all {
+    background: #fff;
+    color: #0075ff;
+    margin-bottom: 65px; }
+  .consultation__title {
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    margin: 30px; }
+  .consultation__question {
+    font-weight: bold;
+    font-size: 24px;
+    color: #0075ff; }
+  .consultation .input {
+    width: 90%;
+    border-radius: 8px;
+    background: #f7f8ff;
+    padding: 17px;
+    outline: none;
+    border: 1px solid #fff;
+    margin-bottom: 16px; }
+  .consultation .input::-webkit-input-placeholder {
+    color: #b9c1ce; }
+  .consultation .input::-moz-placeholder {
+    color: #b9c1ce; }
+  .consultation .input:-ms-input-placeholder {
+    color: #b9c1ce; }
+  .consultation .input::-ms-input-placeholder {
+    color: #b9c1ce; }
+  .consultation .input::placeholder {
+    color: #b9c1ce; }
+  .consultation__btn {
+    background: #0075ff;
+    color: #fff; }
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  border-radius: 8px;
+  border: 2px solid #0075ff;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px 116px; }
 
 /*# sourceMappingURL=main.css.map */
