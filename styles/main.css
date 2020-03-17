@@ -369,6 +369,7 @@ body {
       grid-area: 7 / 1 / 8 / 5; } }
 
 .consultation {
+  margin: 0 auto;
   padding: 20px; }
   .consultation .viev-all {
     background: #fff;
@@ -421,7 +422,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   border-radius: 8px;
   border: 2px solid #0075ff;
   font-weight: bold;
@@ -442,8 +443,12 @@ body {
     .consultation .consultation__wrapper--right {
       max-width: 415px; }
   .btn {
-    max-width: 200px;
-    padding: 10px 50px; } }
+    width: 95%;
+    padding: 10px 50px;
+    margin: 0; }
+  .viev-all {
+    width: 13%;
+    margin: 0 auto; } }
 
 .testimonials {
   display: -webkit-box;
