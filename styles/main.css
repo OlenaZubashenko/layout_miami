@@ -20,10 +20,6 @@ body {
 .non-visible {
   display: none !important; }
 
-.toggle {
-  -webkit-transition: display 1s;
-  transition: display 1s; }
-
 .header {
   display: grid;
   grid-template-areas: "call logo menu" "title title title";
