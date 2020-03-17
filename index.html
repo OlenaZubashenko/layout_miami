@@ -11,9 +11,9 @@
 <body>
   <header class="header toggle" id="header">
     <div class="header__call">
-      <span class="header__call-number">
+      <a href="+1 234 555-55-55" class="header__call-number">
         +1 234 555-55-55
-      </span>
+      </a href="">
     </div>
     <a href="#" class="header__logo"></a>
     <a class="header__nav-btn--open" href="#" onclick="toggleNav()"></a>
@@ -26,18 +26,61 @@
       <a class="header__nav-btn--close" href="#" onclick="toggleNav()"></a>
     </div>
     <ul class="header__nav-list">
-      <li class="header__nav-item">Home</li>
-      <li class="header__nav-item">About us</li>
-      <li class="header__nav-item">Gallery</li>
-      <li class="header__nav-item">Consultation</li>
-      <li class="header__nav-item">Testimonials</li>
-      <li class="header__nav-item">Contacts</li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#home">Home</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#about">About us</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#gallery">Gallery</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#consultation">Consultation</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#testimonials">Testimonials</a>
+      </li>
+      <li class="header__nav-item">
+        <a class="header__nav-link" href="#contacts">Contacts</a>
+      </li>
     </ul>
-    <span class="phone-num">+1 234 555-55-55</span>
+    <a href="+1 234 555-55-55" class="phone-num">+1 234 555-55-55</a>
     <a class="call-to-order" href="#">Call to order</a>
   </div>
 
-  <article class="content">
+  <header class="header-desktop">
+    <div class="header-desktop__wrapper">
+      <div class="header-desctop__top">
+        <a href="+1 234 555-55-55" class="phone-num">+1 234 555-55-55</a>
+        <a href="#" class="header__logo"></a>
+        <a class="call-to-order" href="#">Call to order</a>
+      </div>
+      <h1 class="header__title">Miami </br>Condo Kings</h1>
+      <ul class="header__nav-list">
+        <li class="header__nav-item header__nav-item--active">
+          <a class="header__nav-link header__nav-link" href="">Home</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#about">About us</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#gallery">Gallery</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#consultation">Consultation</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#testimonials">Testimonials</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-link" href="#contacts">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <article class="content" id="about">
     <div class="title-wrapper">
       <h2 class="content__title">
         Miami best </br>
@@ -67,7 +110,7 @@
     </div>
   </article>
 
-  <section class="gallery">
+  <section class="gallery" id="gallery">
     <h2 class="gallery__title">Gallery</h2>
     <div class="foto-wrapper foto1"></div>
     <div class="foto-wrapper foto2"></div>
@@ -98,16 +141,21 @@
         microforms, found a distant historical.
       </p>
     </div>
-    <div class="consultation__wrapper--right">
-      <input class="name input" type="text" placeholder="Name" required>
-      <input class="phone input" type="number" placeholder="Phone" required>
-      <input class="email input" type="email" placeholder="Email" required>
+    <form class="consultation__wrapper--right form" action="#" method="POST">
+      <label for="name" class="label">
+        <input class="name input" id="name" type="text" placeholder="Name" maxlength="10" required>
+      </label>
+      <label for="phone" class="label">
+        <input class="phone input" id="phone" type="tel" placeholder="Phone" maxlength="15" required>
+      </label>
+      <label for="email" class="label">
+        <input class="email input" id="email" type="email" placeholder="Email" maxlength="15" required>
+      </label>
       <button class="consultation__btn btn" type="button" title="consultation">Consultation</button>
-    </div>
-
+    </form>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <h2 class="testimonials__title">Testimonials</h2>
     <div class="testimonials-wrapper">
       <div class="block1 block">
@@ -137,7 +185,7 @@
     </div>
   </section>
 
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <h2 class="contacts__title">Contact us</h2>
     <div class="wrapper-all">
       <div class="contact-info-wrapper-left">
@@ -164,12 +212,19 @@
           Minneapolis, MN 55401
         </span>
       </div>
-      <div class="feedback">
-        <input class="name input" type="text" placeholder="Name" required>
-        <input class="email input" type="email" placeholder="Email" required>
-        <textarea class="message input" placeholder="Message">Message</textarea>
+      <form class="feedback form">
+        <label for="name" class="label">
+          <input class="name input" id="name" type="text" placeholder="Name" maxlength="10" required>
+        </label>
+        <label for="email" class="label">
+          <input class="email input" id="email" type="email" placeholder="Email" maxlength="15" required>
+        </label>
+        <label for="message" class="label">
+          <textarea class="message input" id="message" placeholder="Message" maxlength="30">Message</textarea>
+        </label>
+
         <button class="consultation__btn btn" type="button" title="consultation">Consultation</button>
-      </div>
+      </form>
 
     </div>
 
