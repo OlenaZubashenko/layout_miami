@@ -32,13 +32,12 @@ body {
   background: url(./../images/header.jpg);
   background-position-x: center;
   background-size: cover; }
-  .header .header__call {
+  .header .header__call-icon {
+    cursor: pointer;
     grid-area: call;
     background: url(../images/call.png) no-repeat;
     width: 18px;
     height: 18px; }
-    .header .header__call .header__call-number {
-      display: none; }
   .header .header__logo {
     grid-area: logo;
     background: url(../images/logoMob.svg) no-repeat;
@@ -105,6 +104,8 @@ body {
       .header__nav .header__nav-list .header__nav-item .header__nav-link {
         color: #fff;
         text-decoration: none; }
+  .header__nav .call-to-order {
+    width: 115px; }
   .header__nav .phone-num,
   .header__nav .call-to-order {
     color: #fff;
@@ -113,7 +114,7 @@ body {
     line-height: 25px;
     text-transform: uppercase;
     text-decoration: none;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     border-bottom: 1px solid #faf8f8; }
   .header__nav .phone-num {
     border-bottom: none; }
@@ -153,6 +154,8 @@ body {
         background-size: cover;
         width: 115px;
         height: 76px; }
+      .header-desktop__wrapper .header-desctop__top .call-to-order {
+        width: 115px; }
       .header-desktop__wrapper .header-desctop__top .phone-num,
       .header-desktop__wrapper .header-desctop__top .call-to-order {
         color: #fff;
@@ -161,7 +164,7 @@ body {
         line-height: 25px;
         text-transform: uppercase;
         text-decoration: none;
-        padding-bottom: 10px;
+        padding-bottom: 8px;
         border-bottom: 1px solid #faf8f8; }
       .header-desktop__wrapper .header-desctop__top .phone-num {
         border-bottom: none; }
@@ -248,7 +251,8 @@ body {
     font-weight: bold;
     line-height: 36px;
     font-size: 36px;
-    color: #000; }
+    color: #000;
+    margin-right: 20px; }
   .content__title-link {
     color: #0075ff;
     text-decoration: none; }
@@ -265,7 +269,7 @@ body {
   .content__text--bold {
     font-weight: bold; }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,12 +422,16 @@ body {
   padding: 20px; }
   .consultation .viev-all {
     cursor: pointer;
-    max-width: 200px; }
+    max-width: 280px; }
   .consultation__title {
     font-weight: bold;
     font-size: 36px;
     text-align: center;
     margin: 30px; }
+  .consultation .consultation__wrapper--left {
+    margin-right: 20px; }
+  .consultation .consultation__wrapper--right {
+    max-width: 280px; }
   .consultation__question {
     font-weight: bold;
     font-size: 24px;
@@ -472,7 +480,7 @@ body {
   border: 2px solid #0075ff;
   font-weight: bold;
   font-size: 16px;
-  padding: 20px 116px; }
+  padding: 13px 116px; }
 
 @media (min-width: 700px) {
   .consultation {
@@ -488,7 +496,6 @@ body {
     .consultation .consultation__wrapper--right {
       max-width: 415px; }
   .btn {
-    width: 98%;
     padding: 10px 50px;
     margin: 0; }
   .viev-all {
@@ -561,16 +568,21 @@ body {
     color: #9fadc2;
     font-size: 14px;
     margin-bottom: 0; }
+  .contacts .contact-info-wrapper-left {
+    margin-right: 20px; }
+  .contacts .contact-info-wrapper-right {
+    margin-bottom: 20px; }
   .contacts__info {
     font-size: 16px;
     color: #3e3e3e;
     text-decoration: none;
     font-style: normal; }
   .contacts .feedback {
-    margin-top: 30px; }
+    max-width: 280px; }
     .contacts .feedback .message {
       color: #b9c1ce;
-      font-size: 14px; }
+      font-size: 14px;
+      resize: none; }
   .contacts .input {
     width: 90%;
     border-radius: 8px;
@@ -596,7 +608,7 @@ body {
 @media (min-width: 900px) {
   .contacts {
     padding: 20px;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto; }
   .wrapper-all {
     display: -webkit-box;
@@ -605,6 +617,9 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .wrapper-all .feedback {
+      margin-top: 30px;
+      max-width: 415px; }
     .wrapper-all .contact-info-wrapper-left,
     .wrapper-all .contact-info-wrapper-right {
       max-width: 152px; } }
